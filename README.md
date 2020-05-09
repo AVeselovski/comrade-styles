@@ -1,35 +1,36 @@
-# TOVARISH-CSS
+# COMRADE-STYLES
 
 ## What is?
 
-CSS library for use in my own projects. Somewhat influenced by Botstrap 4.
+CSS library for use in my projects. Somewhat influenced by Botstrap 4.
 
 ## Why?
 
-For fun & learning, mostly. Also, hopefully to eventully save time with "bootstrapping" new projects UI.
+For fun & learning, mostly. Also hopefully to eventully save time with "bootstrapping" new projects UI.
 
 ## Installation
 
-`npm install tovarish-css`
+`npm install comrade-styles`
 
 ## Usage
 
-SCSS (to be able to override variables):
+Import in project's *SCSS* to get access to variables:
 
-```js
-import 'tovarish-css'
-// OR
-require('tovarish-css')
+```scss
+@import "~comrade-styles/scss/comrade";
 ```
 
-Just the compiled CSS:
+Place desired variable overrides *before* above import.
 
+#### OR
+
+If no need for variables, just import compiled *CSS*:
 ```js
-import 'tovarish-css/css'
+import 'comrade-styles'
 // OR
-require('tovarish-css/css')
+require('comrade-styles')
 ```
 
-### Overrides:
+#### Variables for theming are here:
 
-...
+`scss/utils/_config.scss`
