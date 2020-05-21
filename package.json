@@ -1,7 +1,7 @@
 {
   "name": "comrade-styles",
   "version": "1.0.0",
-  "description": "Is CSS library",
+  "description": "Is CSS library. WIP, please ignore.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -13,6 +13,10 @@
     "SASS",
     "SCSS"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aveselovski/comrade-styles.git"
+  },
   "author": "Artur Veselovski",
   "license": "MIT",
   "devDependencies": {

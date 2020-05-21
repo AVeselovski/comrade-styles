@@ -12,50 +12,72 @@ $font-m: rem(19px) !default;
 $font-l: rem(21px) !default;
 $font-xl: rem(26px) !default;
 $font-xxl: rem(33px) !default;
-$font-xxxl: rem(50px) !default;
+$font-xxxl: rem(54px) !default;
+
+$font-weight-s: 400 !default;
+$font-weight-base: 400 !default;
+$font-weight-m: 500 !default;
+$font-weight-l: 500 !default;
+$font-weight-xl: 400 !default;
+$font-weight-xxl: 400 !default;
+$font-weight-xxxl: 400 !default;
 
 // color
-$white: #FAFAFA !default;
-$grey-0: #F2F2F2 !default;
-$grey-1: #EBEBEC !default;
-$grey-2: #E1E1E2 !default;
-$grey-3: #BFBFC0 !default;
+$white: #fafafa !default;
+$grey-0: #f2f2f2 !default;
+$grey-1: #ebebec !default;
+$grey-2: #e1e1e2 !default;
+$grey-3: #bfbfc0 !default;
 $grey-4: #747475 !default;
 $grey-5: #565657 !default;
 $grey-6: #313132 !default;
-$black: #1D1D1E !default;
+$black: #1d1d1e !default;
 
-$red-0: #D86F6C !default;
-$red-1: #D9534F !default;
-$red-2: #CC322C !default;
-$red-3: #B22520 !default;
-$red-4: #93211D !default;
+$red-0: #d86f6c !default;
+$red-1: #d9534f !default;
+$red-2: #cc322c !default;
+$red-3: #b22520 !default;
+$red-4: #93211d !default;
 
-$yellow-0: #F9B548 !default;
-$yellow-1: #FAA825 !default;
-$yellow-2: #E79005 !default;
-$yellow-3: #CC7D00 !default;
-$yellow-4: #B56F00 !default;
+$yellow-0: #f9b548 !default;
+$yellow-1: #faa825 !default;
+$yellow-2: #e79005 !default;
+$yellow-3: #cc7d00 !default;
+$yellow-4: #b56f00 !default;
 
-$green-0: #80C780 !default;
-$green-1: #5CB85C !default;
-$green-2: #449D44 !default;
+$green-0: #80c780 !default;
+$green-1: #5cb85c !default;
+$green-2: #449d44 !default;
 $green-3: #357935 !default;
 $green-4: #296029 !default;
 
-$blue-0: #7BCCE5 !default;
-$blue-1: #51AFCC !default;
-$blue-2: #2493B5 !default;
-$blue-3: #1F7E9B !default;
-$blue-4: #1B6D85 !default;
+$blue-0: #7bcce5 !default;
+$blue-1: #51afcc !default;
+$blue-2: #2493b5 !default;
+$blue-3: #1f7e9b !default;
+$blue-4: #1b6d85 !default;
 
-$primary: $blue-2 !default;
+$bg: $white;
+$color: $grey-6;
+
+$primary: $grey-6 !default;
 $secondary: $grey-4 !default;
+
+$light: $grey-2 !default;
+$dark: $grey-4 !default;
+
+$link: $blue-1 !default;
+$muted: $grey-3 !default;
+
+$info: $blue-3 !default;
 $success: $green-2 !default;
 $warning: $yellow-2 !default;
 $danger: $red-2 !default;
 
-$link: $blue-2 !default;
+$text-info: $blue-4 !default;
+$text-success: $green-3 !default;
+$text-warning: $yellow-3 !default;
+$text-danger: $red-3 !default;
 
 // spacing
 $space-1: rem(4px) !default;
@@ -68,7 +90,7 @@ $space-7: rem(256px) !default;
 $space-8: rem(512px) !default;
 
 // other
-$transition: 350ms cubic-bezier(0.23, 1, 0.32, 1) !default;
+$transition: 175ms cubic-bezier(0.23, 1, 0.32, 1) !default;
 
 html {
   box-sizing: border-box;
@@ -77,42 +99,46 @@ html {
 *,
 *:before,
 *:after {
-   box-sizing: inherit;
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
 }
 body {
-  background-color: $black;
-  color: $white;
-  font-family: 'Roboto',
-               -apple-system,
-               BlinkMacSystemFont,
-               'Segoe UI',
-               Roboto,
-               Helvetica,
-               Arial,
-               sans-serif,
-               'Apple Color Emoji',
-               'Segoe UI Emoji',
-               'Segoe UI Symbol';
+  background-color: $bg;
+  color: $color;
+  font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
   line-height: 1.5;
-  margin: 0;
   min-height: 100vh;
-  padding: 0;
 }
-h1, h2, h3, h4, h5, h6, p {
-  margin: 0;
-  padding: 0;
-}
-h1, h2, h3, h4, h5, h6, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
   font-size: $font-base;
+  font-weight: $font-weight-base;
 }
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: $font-m;
+  font-weight: $font-weight-m;
   line-height: 1.2;
 }
 a {
   color: $link;
   text-decoration: none;
 
-  &:hover, &:focus, &:active {
+  &:hover,
+  &:focus,
+  &:active {
     color: darken($link, 10);
     text-decoration: none;
   }
@@ -120,4 +146,10 @@ a {
 svg {
   fill: $black;
   stroke: $black;
+}
+ul {
+  display: block;
+  margin-top: $space-3;
+  margin-bottom: $space-3;
+  padding-left: $space-4;
 }

@@ -2,11 +2,13 @@
 
 ## What is?
 
-CSS library for use in my projects. Somewhat influenced by Botstrap 4.
+This is just a "simple" CSS library for use in my own projects. Please ignore.
 
-## Why?
+Somewhat influenced by Botstrap 4.
 
-For fun & learning, mostly. Also hopefully to eventully save time with "bootstrapping" new projects UI.
+## Why is?
+
+For fun & learning, mostly. It's fun to have your own custom tailored CSS-library at your disposal. Also to hopefully save time with "bootstrapping" new projects UI.
 
 ## Installation
 
@@ -14,23 +16,24 @@ For fun & learning, mostly. Also hopefully to eventully save time with "bootstra
 
 ## Usage
 
-Import in project's *SCSS* to get access to variables:
+Import in project's _SCSS_ to get access to variables:
 
 ```scss
 @import "~comrade-styles/scss/comrade";
 ```
 
-Place desired variable overrides *before* above import.
+Place desired variable overrides _before_ above import.
 
 #### OR
 
-If no need for variables, just import compiled *CSS*:
+If no need for variables, just import compiled _CSS_:
+
 ```js
-import 'comrade-styles'
+import "comrade-styles";
 // OR
-require('comrade-styles')
+require("comrade-styles");
 ```
 
-#### Variables for theming are here:
+#### Variables for theming are located here:
 
 `scss/utils/_config.scss`

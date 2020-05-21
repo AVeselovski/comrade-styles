@@ -277,6 +277,7 @@
   padding-bottom: $space-5;
   padding-top: $space-5;
 }
+
 // flexin'
 .flex {
   align-items: center;
@@ -291,6 +292,7 @@
 .justify-center {
   justify-content: center;
 }
+
 // font
 .mono {
   font-family: monospace;
@@ -304,10 +306,21 @@
 .text-align-right {
   text-align: right !important;
 }
+
 // other
 .disabled {
-  opacity: 0.5;
+  opacity: 0.3;
   pointer-events: none;
+}
+
+// color
+.default {
+  color: inherit !important;
+  stroke: inherit !important;
+
+  svg {
+    stroke: inherit !important;
+  }
 }
 .primary {
   color: $primary !important;
@@ -317,12 +330,28 @@
     stroke: $primary !important;
   }
 }
-.muted {
-  color: $grey-3 !important;
-  stroke: $grey-3 !important;
+.secondary {
+  color: $secondary !important;
+  stroke: $secondary !important;
 
   svg {
-    stroke: $grey-3 !important;
+    stroke: $secondary !important;
+  }
+}
+.muted {
+  color: $muted !important;
+  stroke: $muted !important;
+
+  svg {
+    stroke: $muted !important;
+  }
+}
+.info {
+  color: $info !important;
+  stroke: $info !important;
+
+  svg {
+    stroke: $info !important;
   }
 }
 .success {
@@ -347,5 +376,37 @@
 
   svg {
     stroke: $danger !important;
+  }
+}
+.text-info {
+  color: $text-info !important;
+  stroke: $text-info !important;
+
+  svg {
+    stroke: $text-info !important;
+  }
+}
+.text-success {
+  color: $text-success !important;
+  stroke: $text-success !important;
+
+  svg {
+    stroke: $text-success !important;
+  }
+}
+.text-warning {
+  color: $text-warning !important;
+  stroke: $text-warning !important;
+
+  svg {
+    stroke: $text-warning !important;
+  }
+}
+.text-danger {
+  color: $text-danger !important;
+  stroke: $text-danger !important;
+
+  svg {
+    stroke: $text-danger !important;
   }
 }
