@@ -1,6 +1,6 @@
 {
   "name": "comrade-styles",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Is CSS library. WIP, please ignore.",
   "main": "index.js",
   "scripts": {
