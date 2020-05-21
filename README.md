@@ -2,17 +2,17 @@
 
 ## What is?
 
-This is just a "simple" CSS library for use in my own projects. Please ignore.
+This is a CSS library for use in my own projects. WIP, please ignore.
 
-Somewhat influenced by Botstrap 4.
+Somewhat influenced by Botstrap 4, somewhat by Material UI.
 
 ## Why is?
 
-For fun & learning, mostly. It's fun to have your own custom tailored CSS-library at your disposal. Also to hopefully save time with "bootstrapping" new projects UI.
+Mainly it's fun to have your own custom tailored CSS-library at your disposal. Eventually, to save time "bootstrapping" new projects UI.
 
 ## Installation
 
-`npm install comrade-styles`
+`yarn add comrade-styles`
 
 ## Usage
 
