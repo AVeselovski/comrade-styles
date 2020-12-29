@@ -1,8 +1,8 @@
-// HEADER
+// Header
 .header {
   align-content: center;
   display: inline-grid;
-  grid-template-columns: 20% auto 20%;
+  grid-template-columns: auto auto auto;
   height: 80px;
   left: 0;
   pointer-events: none;
@@ -15,12 +15,14 @@
     align-self: center;
     grid-column-start: 1;
     justify-self: left;
+    padding-left: $space-3;
     pointer-events: auto;
     text-align: left;
   }
 
   &-center {
     align-self: center;
+    display: none;
     grid-column-start: 2;
     justify-self: center;
     pointer-events: auto;
@@ -29,14 +31,48 @@
 
   &-right {
     align-self: center;
+    display: block;
     grid-column-start: 3;
     justify-self: right;
+    padding-right: $space-3;
     pointer-events: auto;
     text-align: right;
   }
+
+  // @media (min-width: $medium) {
+  //   &-right {
+  //     display: block;
+  //   }
+  // }
+
+  @media (min-width: $large) {
+    &-center {
+      display: block;
+    }
+  }
+}
+.header.static {
+  position: static;
 }
 
-// DROPDOWN
+// Navigation
+.nav-desktop {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  & > * {
+    display: inline-block;
+  }
+
+  &-item {
+    display: inline-block;
+    margin-left: $space-2;
+    margin-right: $space-2;
+  }
+}
+
+// Dropdown
 .dropdown {
   position: relative;
 
@@ -99,7 +135,7 @@
   }
 }
 
-// MODAL
+// Modal
 .modal {
   align-items: flex-start;
   background-color: rgba(0, 0, 0, 0.2);
@@ -128,7 +164,7 @@
   border-bottom: 1px solid $grey-2;
 
   .modal-title {
-    font-size: $font-l;
+    font-size: $font-size-lg;
     font-weight: 500;
     line-height: 1;
   }

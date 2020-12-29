@@ -1,4 +1,10 @@
+@import "utils/normalize";
 @import "utils/config";
-@import "utils/elements";
-@import "utils/patterns";
-@import "utils/modifiers";
+@import "font-awesome/fontawesome.scss";
+@import "font-awesome/solid.scss";
+@import "font-awesome/regular.scss";
+@import "font-awesome/brands.scss";
+@import "layout";
+@import "elements";
+@import "patterns";
+@import "modifiers";

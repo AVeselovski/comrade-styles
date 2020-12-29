@@ -1,0 +1,21 @@
+{
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "liveSassCompile.settings.autoprefix": [],
+  "liveSassCompile.settings.excludeList": [
+    "**/node_modules/**",
+    "**/font-awesome/**"
+  ],
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "/develop"
+    },
+    {
+      "format": "nested",
+      "extensionName": ".css",
+      "savePath": "/develop"
+    }
+  ]
+}

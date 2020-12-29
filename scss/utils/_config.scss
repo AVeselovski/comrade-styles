@@ -1,26 +1,38 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap&subset=latin-ext");
 
 // font
-$font-base: 16px !default;
+$fa-font-path: "./webfonts" !default;
+$font-size-base: 16px !default;
 
-@function rem($target, $context: $font-base) {
+@function rem($target, $context: $font-size-base) {
   @return ($target / $context) * 1rem;
 }
 
-$font-s: rem(12px) !default;
-$font-m: rem(19px) !default;
-$font-l: rem(21px) !default;
-$font-xl: rem(26px) !default;
-$font-xxl: rem(33px) !default;
-$font-xxxl: rem(54px) !default;
+$font-size-sm: rem(12px) !default;
+$font-size-md: rem(19px) !default;
+$font-size-lg: rem(21px) !default;
+$font-size-xl: rem(26px) !default;
+$font-size-xxl: rem(33px) !default;
+$font-size-xxxl: rem(54px) !default;
 
-$font-weight-s: 400 !default;
+$font-weight-thin: 100 !default;
+$font-weight-slim: 300 !default;
 $font-weight-base: 400 !default;
-$font-weight-m: 500 !default;
-$font-weight-l: 500 !default;
-$font-weight-xl: 400 !default;
-$font-weight-xxl: 400 !default;
-$font-weight-xxxl: 400 !default;
+$font-weight-chunky: 500 !default;
+$font-weight-fat: 700 !default;
+
+.font-sm {
+  font-size: $font-size-sm;
+  font-weight: $font-weight-base;
+}
+.font-base {
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+}
+.font-md {
+  font-size: $font-size-md;
+  font-weight: $font-weight-chunky;
+}
 
 // color
 $white: #fafafa !default;
@@ -61,20 +73,25 @@ $bg: $white;
 $color: $grey-6;
 
 $primary: $grey-6 !default;
+$primary-dark: $grey-1 !default;
 $secondary: $grey-4 !default;
 
 $light: $grey-2 !default;
 $dark: $grey-4 !default;
 
-$link: $blue-1 !default;
+$link: $blue-2 !default;
 $muted: $grey-3 !default;
 
 $info: $blue-3 !default;
+$info-dark: $blue-3 !default;
 $success: $green-2 !default;
+$success-dark: $green-2 !default;
 $warning: $yellow-2 !default;
+$warning-dark: $yellow-2 !default;
 $danger: $red-2 !default;
+$danger-dark: $red-2 !default;
 
-$text-info: $blue-4 !default;
+$text-info: $blue-3 !default;
 $text-success: $green-3 !default;
 $text-warning: $yellow-3 !default;
 $text-danger: $red-3 !default;
@@ -89,19 +106,15 @@ $space-6: rem(128px) !default;
 $space-7: rem(256px) !default;
 $space-8: rem(512px) !default;
 
+// breakpoints
+$medium: 768px !default;
+$large: 992px !default;
+
 // other
 $transition: 175ms cubic-bezier(0.23, 1, 0.32, 1) !default;
 
 html {
-  box-sizing: border-box;
-  font-size: $font-base;
-}
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-  margin: 0;
-  padding: 0;
+  font-size: $font-size-base;
 }
 body {
   background-color: $bg;
@@ -112,15 +125,10 @@ body {
   line-height: 1.5;
   min-height: 100vh;
 }
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
 p {
-  font-size: $font-base;
+  font-size: $font-size-base;
   font-weight: $font-weight-base;
+  margin-bottom: $space-3;
 }
 h1,
 h2,
@@ -128,28 +136,73 @@ h3,
 h4,
 h5,
 h6 {
-  font-size: $font-m;
-  font-weight: $font-weight-m;
   line-height: 1.2;
 }
-a {
+a,
+.link {
   color: $link;
+  fill: $link;
+  display: inline-block;
+  stroke: $link;
   text-decoration: none;
 
   &:hover,
   &:focus,
   &:active {
-    color: darken($link, 10);
+    color: darken($link, 40);
+    fill: darken($link, 10);
+    stroke: darken($link, 10);
     text-decoration: none;
   }
+}
+a.active,
+.link.active {
+  color: darken($link, 10);
+  fill: darken($link, 10);
+  stroke: darken($link, 10);
+}
+p a {
+  text-decoration: underline;
 }
 svg {
   fill: $black;
   stroke: $black;
 }
-ul {
+ul,
+ol {
   display: block;
   margin-top: $space-3;
   margin-bottom: $space-3;
   padding-left: $space-4;
+}
+ul li::marker,
+ol li::marker {
+  color: darken($grey-3, 15);
+}
+code {
+  color: $red-0;
+}
+
+// font-awesome
+.fa,
+.fas,
+.far,
+.fab {
+  // line-height: 1.5 !important;
+  vertical-align: 1px;
+}
+button {
+  .fa,
+  .fas,
+  .far,
+  .fab {
+    // line-height: 1.5 !important;
+    vertical-align: 0px;
+  }
+}
+.ui.fa,
+.ui.fas,
+.ui.far,
+.ui.fab {
+  font-size: $font-size-md;
 }
