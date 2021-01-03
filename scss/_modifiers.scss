@@ -338,12 +338,20 @@
     stroke: inherit !important;
   }
 }
-.text-primary {
-  color: $primary !important;
-  stroke: $primary !important;
+.text-black {
+  color: $grey-6 !important;
+  stroke: $grey-6 !important;
 
   svg {
-    stroke: $primary !important;
+    stroke: $grey-6 !important;
+  }
+}
+.text-white {
+  color: $grey-0 !important;
+  stroke: $grey-0 !important;
+
+  svg {
+    stroke: $grey-0 !important;
   }
 }
 .text-secondary {
@@ -370,6 +378,14 @@
     stroke: $text-info !important;
   }
 }
+.text-danger {
+  color: $text-danger !important;
+  stroke: $text-danger !important;
+
+  svg {
+    stroke: $text-danger !important;
+  }
+}
 .text-success {
   color: $text-success !important;
   stroke: $text-success !important;
@@ -386,14 +402,6 @@
     stroke: $text-warning !important;
   }
 }
-.text-danger {
-  color: $text-danger !important;
-  stroke: $text-danger !important;
-
-  svg {
-    stroke: $text-danger !important;
-  }
-}
 
 // ** COLOR **
 
@@ -404,13 +412,16 @@
   background-color: $white !important;
 }
 .bg-dark {
-  background-color: $dark !important;
+  background-color: $bg-dark !important;
 }
 .bg-light {
-  background-color: $light !important;
+  background-color: $bg-light !important;
 }
 .bg-info {
   background-color: $info !important;
+}
+.bg-danger {
+  background-color: $danger !important;
 }
 .bg-success {
   background-color: $success !important;
@@ -418,13 +429,10 @@
 .bg-warning {
   background-color: $warning !important;
 }
-.bg-danger {
-  background-color: $danger !important;
-}
 
 // ** BREAKPOINTS **
 
-.screen-small {
+.screen-sm {
   display: initial;
 
   @media (min-width: $medium) {
@@ -434,7 +442,7 @@
     display: initial;
   }
 }
-.screen-small-only {
+.screen-sm-only {
   display: initial;
 
   @media (min-width: $medium) {
@@ -444,7 +452,7 @@
     display: none;
   }
 }
-.screen-medium {
+.screen-md {
   display: none;
 
   @media (min-width: $medium) {
@@ -454,7 +462,7 @@
     display: initial;
   }
 }
-.screen-medium-only {
+.screen-md-only {
   display: none;
 
   @media (min-width: $medium) {
@@ -464,8 +472,8 @@
     display: none;
   }
 }
-.screen-large,
-.screen-large-only {
+.screen-md,
+.screen-md-only {
   display: none;
 
   @media (min-width: $medium) {
@@ -479,6 +487,6 @@
 // ** OTHER **
 
 .is-disabled {
-  opacity: 0.3;
+  opacity: 0.35;
   pointer-events: none;
 }

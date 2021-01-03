@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700&display=swap&subset=latin-ext");
 
-// font
+// ** FONT **
+
 $fa-font-path: "./webfonts" !default;
 $font-size-base: 16px !default;
 
@@ -34,7 +35,8 @@ $font-weight-fat: 700 !default;
   font-weight: $font-weight-chunky;
 }
 
-// color
+// ** COLORS **
+
 $white: #fafafa !default;
 $grey-0: #f2f2f2 !default;
 $grey-1: #ebebec !default;
@@ -72,9 +74,13 @@ $blue-4: #1b6d85 !default;
 $bg: $white;
 $color: $grey-6;
 
+$bg-dark: $grey-6;
+$bg-light: $grey-0;
+
 $primary: $grey-6 !default;
-$primary-dark: $grey-1 !default;
 $secondary: $grey-4 !default;
+
+$primary-dark: $grey-1 !default;
 
 $light: $grey-2 !default;
 $dark: $grey-4 !default;
@@ -83,12 +89,13 @@ $link: $blue-2 !default;
 $muted: $grey-3 !default;
 
 $info: $blue-3 !default;
-$info-dark: $blue-3 !default;
 $success: $green-2 !default;
-$success-dark: $green-2 !default;
 $warning: $yellow-2 !default;
-$warning-dark: $yellow-2 !default;
 $danger: $red-2 !default;
+
+$info-dark: $blue-3 !default;
+$success-dark: $green-2 !default;
+$warning-dark: $yellow-2 !default;
 $danger-dark: $red-2 !default;
 
 $text-info: $blue-3 !default;
@@ -96,7 +103,8 @@ $text-success: $green-3 !default;
 $text-warning: $yellow-3 !default;
 $text-danger: $red-3 !default;
 
-// spacing
+// ** SPACING **
+
 $space-1: rem(4px) !default;
 $space-2: rem(8px) !default;
 $space-3: rem(16px) !default;
@@ -106,12 +114,16 @@ $space-6: rem(128px) !default;
 $space-7: rem(256px) !default;
 $space-8: rem(512px) !default;
 
-// breakpoints
+// ** BREAKPOINTS **
+
 $medium: 768px !default;
 $large: 992px !default;
 
-// other
+// ** OTHER **
+
 $transition: 175ms cubic-bezier(0.23, 1, 0.32, 1) !default;
+
+// ** BASIC STYLES **
 
 html {
   font-size: $font-size-base;
@@ -149,20 +161,26 @@ a,
   &:hover,
   &:focus,
   &:active {
-    color: darken($link, 40);
-    fill: darken($link, 10);
-    stroke: darken($link, 10);
+    color: darken($link, 15);
+    fill: darken($link, 15);
+    stroke: darken($link, 15);
     text-decoration: none;
   }
 }
-a.active,
-.link.active {
-  color: darken($link, 10);
-  fill: darken($link, 10);
-  stroke: darken($link, 10);
+a.is-active,
+.link.is-active {
+  color: darken($link, 15);
+  fill: darken($link, 15);
+  stroke: darken($link, 15);
 }
 p a {
   text-decoration: underline;
+
+  &:hover,
+  &:focus,
+  &:active {
+    text-decoration: underline;
+  }
 }
 svg {
   fill: $black;
@@ -182,13 +200,11 @@ ol li::marker {
 code {
   color: $red-0;
 }
-
 // font-awesome
 .fa,
 .fas,
 .far,
 .fab {
-  // line-height: 1.5 !important;
   vertical-align: 1px;
 }
 button {
@@ -196,7 +212,6 @@ button {
   .fas,
   .far,
   .fab {
-    // line-height: 1.5 !important;
     vertical-align: 0px;
   }
 }
