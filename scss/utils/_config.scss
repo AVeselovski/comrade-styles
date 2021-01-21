@@ -71,37 +71,38 @@ $blue-2: #2493b5 !default;
 $blue-3: #1f7e9b !default;
 $blue-4: #1b6d85 !default;
 
-$bg: $white;
-$color: $grey-6;
-
-$bg-dark: $grey-6;
-$bg-light: $grey-0;
+$bg: $white !default;
+$color: $black !default;
+$text: $grey-6 !default;
+$highlight: $grey-1 !default;
+$surface: #fff !default;
+$faded: $grey-4 !default;
+$border: $grey-2 !default;
 
 $primary: $grey-6 !default;
 $secondary: $grey-4 !default;
-
-$primary-dark: $grey-1 !default;
-
-$light: $grey-2 !default;
-$dark: $grey-4 !default;
-
-$link: $blue-2 !default;
-$muted: $grey-3 !default;
-
-$info: $blue-3 !default;
+$info: $blue-2 !default;
+$danger: $red-2 !default;
 $success: $green-2 !default;
 $warning: $yellow-2 !default;
-$danger: $red-2 !default;
+$info-text: $blue-3 !default;
+$danger-text: $red-3 !default;
+$success-text: $green-3 !default;
+$warning-text: $yellow-3 !default;
 
-$info-dark: $blue-3 !default;
-$success-dark: $green-2 !default;
-$warning-dark: $yellow-2 !default;
-$danger-dark: $red-2 !default;
+$link: $blue-2 !default;
+$linkActive: $blue-4 !default;
+$muted: $grey-3 !default;
+$code: $red-4 !default;
 
-$text-info: $blue-3 !default;
-$text-success: $green-3 !default;
-$text-warning: $yellow-3 !default;
-$text-danger: $red-3 !default;
+$light: $grey-2 !default;
+$dark: $grey-5 !default;
+
+// dark bg
+$info-dark: $blue-1 !default;
+$danger-dark: $red-1 !default;
+$success-dark: $green-1 !default;
+$warning-dark: $yellow-1 !default;
 
 // ** SPACING **
 
@@ -130,7 +131,7 @@ html {
 }
 body {
   background-color: $bg;
-  color: $color;
+  color: $text;
   font-family: "Roboto", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
     Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
     "Segoe UI Symbol";
@@ -167,8 +168,8 @@ a,
     text-decoration: none;
   }
 }
-a.is-active,
-.link.is-active {
+a.active,
+.link.active {
   color: darken($link, 15);
   fill: darken($link, 15);
   stroke: darken($link, 15);
@@ -205,7 +206,7 @@ code {
 .fas,
 .far,
 .fab {
-  vertical-align: 1px;
+  // vertical-align: 0px;
 }
 button {
   .fa,

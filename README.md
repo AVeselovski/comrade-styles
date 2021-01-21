@@ -2,13 +2,17 @@
 
 ## What is?
 
-This is a CSS library for use in my own projects. WIP, please ignore.
+**WIP**, please ignore. This is a CSS library / style pattern for use in hobby projects. Not meant for "wider" use.
 
-Somewhat influenced by Botstrap 4, somewhat by Material UI.
+Strongly influenced by Bootstarp 4, somewhat by Material UI. Everything is very much a work in progress, nothing is decided, nothing is set in stone. A whole new library with almost every major update.
 
 ## Why is?
 
-Mainly it's fun to have your own custom tailored CSS-library at your disposal. Eventually, to save time "bootstrapping" new projects UI.
+Mainly it's fun to have your own custom tailored CSS-library at your disposal. Convenience and function are secondary (will get there...).
+
+## How is?
+
+Just CSS, no JS. Meant to be used as a base for possible JS Framework integrations, or as is.
 
 ## Installation
 

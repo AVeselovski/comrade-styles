@@ -1,0 +1,1121 @@
+// ** BUTTONS **
+
+button {
+  background-color: transparent;
+  border: 1px solid transparent;
+  border-radius: 3px;
+  color: $secondary;
+  display: inline-block;
+  font-family: inherit;
+  font-size: $font-size-base;
+  font-weight: $font-weight-base;
+  line-height: 1.2;
+  outline: none;
+  padding: 6px 12px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color $transition, border-color $transition,
+    color $transition;
+  user-select: none;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+
+  &:hover:not(:disabled),
+  &:active:not(:disabled),
+  &:focus {
+    background-color: $highlight;
+    color: $color;
+    cursor: pointer;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.35;
+  }
+
+  &.btn-full {
+    display: block;
+    width: 100%;
+  }
+  &.btn-sm {
+    font-size: $font-size-sm;
+    font-weight: $font-weight-chunky;
+    padding: 4px 8px;
+  }
+  &.btn-md {
+    font-size: $font-size-base;
+    font-weight: $font-weight-base;
+    padding: 6px 12px;
+  }
+  &.btn-lg {
+    font-size: $font-size-md;
+    font-weight: $font-weight-base;
+    padding: 10px 16px;
+  }
+}
+.btn {
+  @extend button;
+
+  &.btn-default,
+  &.btn-ghost,
+  &.btn-secondary {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: $secondary;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: $highlight;
+      border-color: $highlight;
+      color: $color;
+    }
+  }
+  &.btn-primary {
+    background-color: $primary;
+    border: 1px solid $primary;
+    border-radius: 3px;
+    color: $bg;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: $color;
+      border-color: $color;
+      color: $bg;
+    }
+  }
+  &.btn-inverted-primary {
+    background-color: transparent;
+    border: 1px solid $muted;
+    border-radius: 3px;
+    color: $primary;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: $highlight;
+      border-color: $color;
+      color: $color;
+    }
+  }
+  &.btn-info {
+    background-color: $info;
+    border: 1px solid $info;
+    border-radius: 3px;
+    color: $bg;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: darken($info, 5);
+      border-color: darken($info, 5);
+      color: $bg;
+    }
+  }
+  &.btn-inverted-info {
+    background-color: transparent;
+    border: 1px solid $muted;
+    border-radius: 3px;
+    color: $info-text;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: transparent;
+      border-color: darken($info-text, 5);
+      color: darken($info-text, 5);
+    }
+  }
+  &.btn-danger {
+    background-color: $danger;
+    border: 1px solid $danger;
+    border-radius: 3px;
+    color: $bg;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: darken($danger, 5);
+      border-color: darken($danger, 5);
+      color: $bg;
+    }
+  }
+  &.btn-inverted-danger {
+    background-color: transparent;
+    border: 1px solid $muted;
+    border-radius: 3px;
+    color: $danger-text;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: transparent;
+      border-color: darken($danger-text, 5);
+      color: darken($danger-text, 5);
+    }
+  }
+  &.btn-success {
+    background-color: $success;
+    border: 1px solid $success;
+    border-radius: 3px;
+    color: $bg;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: darken($success, 5);
+      border-color: darken($success, 5);
+      color: $bg;
+    }
+  }
+  &.btn-inverted-success {
+    background-color: transparent;
+    border: 1px solid $muted;
+    border-radius: 3px;
+    color: $success-text;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: transparent;
+      border-color: darken($success-text, 5);
+      color: darken($success-text, 5);
+    }
+  }
+  &.btn-warning {
+    background-color: $warning;
+    border: 1px solid $warning;
+    border-radius: 3px;
+    color: $bg;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: darken($warning, 5);
+      border-color: darken($warning, 5);
+      color: $bg;
+    }
+  }
+  &.btn-inverted-warning {
+    background-color: transparent;
+    border: 1px solid $muted;
+    border-radius: 3px;
+    color: $warning-text;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: transparent;
+      border-color: darken($warning-text, 5);
+      color: darken($warning-text, 5);
+    }
+  }
+}
+.btn.btn-dark {
+  @extend button;
+
+  &.btn-default,
+  &.btn-ghost,
+  &.btn-secondary {
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 3px;
+    color: $light;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: lighten($grey-6, 5);
+      border-color: lighten($grey-6, 5);
+      color: $bg;
+    }
+  }
+  &.btn-primary {
+    background-color: $grey-0;
+    border: 1px solid $grey-0;
+    border-radius: 3px;
+    color: $grey-6;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: $bg;
+      border-color: $bg;
+      color: $color;
+    }
+  }
+  &.btn-inverted-primary {
+    background-color: transparent;
+    border: 1px solid $grey-4;
+    border-radius: 3px;
+    color: $grey-0;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: lighten($grey-6, 5);
+      border-color: $bg;
+      color: $bg;
+    }
+  }
+  &.btn-info {
+    background-color: $blue-1;
+    border: 1px solid $blue-1;
+    border-radius: 3px;
+    color: $bg;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: lighten($blue-1, 5);
+      border-color: lighten($blue-1, 5);
+      color: $bg;
+    }
+  }
+  &.btn-inverted-info {
+    background-color: transparent;
+    border: 1px solid $grey-4;
+    border-radius: 3px;
+    color: $blue-0;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: transparent;
+      border-color: lighten($blue-0, 5);
+      color: lighten($blue-0, 5);
+    }
+  }
+  &.btn-danger {
+    background-color: $red-1;
+    border: 1px solid $red-1;
+    border-radius: 3px;
+    color: $bg;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: lighten($red-1, 5);
+      border-color: lighten($red-1, 5);
+      color: $bg;
+    }
+  }
+  &.btn-inverted-danger {
+    background-color: transparent;
+    border: 1px solid $grey-4;
+    border-radius: 3px;
+    color: $red-0;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: transparent;
+      border-color: lighten($red-0, 5);
+      color: lighten($red-0, 5);
+    }
+  }
+  &.btn-success {
+    background-color: $green-1;
+    border: 1px solid $green-1;
+    border-radius: 3px;
+    color: $bg;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: lighten($green-1, 5);
+      border-color: lighten($green-1, 5);
+      color: $bg;
+    }
+  }
+  &.btn-inverted-success {
+    background-color: transparent;
+    border: 1px solid $grey-4;
+    border-radius: 3px;
+    color: $green-0;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: transparent;
+      border-color: lighten($green-0, 5);
+      color: lighten($green-0, 5);
+    }
+  }
+  &.btn-warning {
+    background-color: $yellow-1;
+    border: 1px solid $yellow-1;
+    border-radius: 3px;
+    color: $bg;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: lighten($yellow-1, 5);
+      border-color: lighten($yellow-1, 5);
+      color: $bg;
+    }
+  }
+  &.btn-inverted-warning {
+    background-color: transparent;
+    border: 1px solid $grey-4;
+    border-radius: 3px;
+    color: $yellow-0;
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: transparent;
+      border-color: lighten($yellow-0, 5);
+      color: lighten($yellow-0, 5);
+    }
+  }
+}
+
+// ** BUTTON ICONS **
+
+// Simple icon buttons
+.btn-icon-simple {
+  align-items: center;
+  background-color: transparent;
+  border: none;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: $secondary;
+  cursor: pointer;
+  display: inline-block;
+  display: inline-flex;
+  font-family: inherit;
+  font-size: $font-size-md;
+  height: 26px;
+  justify-content: center;
+  line-height: 1;
+  padding: 0;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color $transition, border-color $transition,
+    color $transition;
+  user-select: none;
+  vertical-align: middle;
+  width: 26px;
+
+  i {
+    @extend .fa-fw;
+
+    vertical-align: middle;
+  }
+  svg {
+    fill: $secondary;
+    stroke: $secondary;
+    z-index: 1;
+  }
+
+  &:hover:not(:disabled),
+  &:active:not(:disabled),
+  &:focus {
+    background-color: transparent;
+    color: $color;
+
+    svg {
+      fill: $color;
+      stroke: $color;
+    }
+  }
+  &:disabled {
+    opacity: 0.35;
+  }
+
+  &.btn-info {
+    color: $info;
+
+    svg {
+      fill: $info;
+      stroke: $info;
+      z-index: 1;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      color: darken($info, 5);
+
+      svg {
+        fill: darken($info, 5);
+        stroke: darken($info, 5);
+      }
+    }
+  }
+  &.btn-danger {
+    color: $danger;
+
+    svg {
+      fill: $danger;
+      stroke: $danger;
+      z-index: 1;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: transparent;
+      color: darken($danger, 5);
+
+      svg {
+        fill: darken($danger, 5);
+        stroke: darken($danger, 5);
+      }
+    }
+  }
+  &.btn-success {
+    color: $success;
+
+    svg {
+      fill: $success;
+      stroke: $success;
+      z-index: 1;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: transparent;
+      color: darken($success, 5);
+
+      svg {
+        fill: darken($success, 5);
+        stroke: darken($success, 5);
+      }
+    }
+  }
+  &.btn-warning {
+    color: $warning;
+
+    svg {
+      fill: $warning;
+      stroke: $warning;
+      z-index: 1;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: transparent;
+      color: darken($warning, 5);
+
+      svg {
+        fill: darken($warning, 5);
+        stroke: darken($warning, 5);
+      }
+    }
+  }
+}
+.btn-icon-simple.btn-dark {
+  @extend .btn-icon-simple;
+
+  color: $light;
+
+  svg {
+    fill: $light;
+    stroke: $light;
+    z-index: 1;
+  }
+
+  &:hover:not(:disabled),
+  &:active:not(:disabled),
+  &:focus {
+    background-color: transparent;
+    color: $bg;
+
+    svg {
+      fill: $bg;
+      stroke: $bg;
+    }
+  }
+
+  &.btn-info {
+    color: $info-dark;
+
+    svg {
+      fill: $info-dark;
+      stroke: $info-dark;
+      z-index: 1;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      color: lighten($info-dark, 5);
+
+      svg {
+        fill: lighten($info-dark, 5);
+        stroke: lighten($info-dark, 5);
+      }
+    }
+  }
+  &.btn-danger {
+    color: $danger-dark;
+
+    svg {
+      fill: $danger-dark;
+      stroke: $danger-dark;
+      z-index: 1;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: transparent;
+      color: lighten($danger-dark, 5);
+
+      svg {
+        fill: lighten($danger-dark, 5);
+        stroke: lighten($danger-dark, 5);
+      }
+    }
+  }
+  &.btn-success {
+    color: $success-dark;
+
+    svg {
+      fill: $success-dark;
+      stroke: $success-dark;
+      z-index: 1;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: transparent;
+      color: lighten($success-dark, 5);
+
+      svg {
+        fill: lighten($success-dark, 5);
+        stroke: lighten($success-dark, 5);
+      }
+    }
+  }
+  &.btn-warning {
+    color: $warning-dark;
+
+    svg {
+      fill: $warning-dark;
+      stroke: $warning-dark;
+      z-index: 1;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: transparent;
+      color: lighten($warning-dark, 5);
+
+      svg {
+        fill: lighten($warning-dark, 5);
+        stroke: lighten($warning-dark, 5);
+      }
+    }
+  }
+}
+
+.btn-icon-simple.btn-sm {
+  font-size: $font-size-base;
+  height: 26px;
+  width: 26px;
+}
+.btn-icon-simple.btn-md {
+  font-size: $font-size-md;
+  height: 26px;
+  width: 26px;
+}
+.btn-icon-simple.btn-lg {
+  font-size: $font-size-xl;
+  height: 32px;
+  width: 32px;
+}
+
+// Normal ("button-like") buttons
+.btn-icon {
+  @extend .btn-icon-simple;
+
+  height: 44px;
+  width: 44px;
+
+  &:hover:not(:disabled),
+  &:active:not(:disabled),
+  &:focus {
+    background-color: $highlight;
+  }
+
+  &.btn-primary {
+    background: $primary;
+    color: $bg;
+
+    svg {
+      fill: $bg;
+      stroke: $bg;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background: $color;
+      color: $bg;
+
+      svg {
+        fill: $bg;
+        stroke: $bg;
+      }
+    }
+  }
+  &.btn-inverted-primary {
+    background: transparent;
+    border: 1px solid $muted;
+    color: $primary;
+
+    svg {
+      fill: $primary;
+      stroke: $primary;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background: $highlight;
+      border-color: $color;
+      color: $color;
+
+      svg {
+        fill: $color;
+        stroke: $color;
+      }
+    }
+  }
+  &.btn-info {
+    background: $info;
+    color: $bg;
+
+    svg {
+      fill: $bg;
+      stroke: $bg;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: darken($info, 5);
+      border-color: darken($info, 5);
+      color: $bg;
+
+      svg {
+        fill: $bg;
+        stroke: $bg;
+      }
+    }
+  }
+  &.btn-inverted-info {
+    background: transparent;
+    border: 1px solid $muted;
+    color: $info-text;
+
+    svg {
+      fill: $info-text;
+      stroke: $info-text;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: transparent;
+      border-color: darken($info-text, 5);
+      color: darken($info-text, 5);
+
+      svg {
+        fill: darken($info-text, 5);
+        stroke: darken($info-text, 5);
+      }
+    }
+  }
+  &.btn-danger {
+    background: $danger;
+    color: $bg;
+
+    svg {
+      fill: $bg;
+      stroke: $bg;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: darken($danger, 5);
+      border-color: darken($danger, 5);
+      color: $bg;
+
+      svg {
+        fill: $bg;
+        stroke: $bg;
+      }
+    }
+  }
+  &.btn-inverted-danger {
+    background: transparent;
+    border: 1px solid $muted;
+    color: $danger-text;
+
+    svg {
+      fill: $danger-text;
+      stroke: $danger-text;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: transparent;
+      border-color: darken($danger-text, 5);
+      color: darken($danger-text, 5);
+
+      svg {
+        fill: darken($danger-text, 5);
+        stroke: darken($danger-text, 5);
+      }
+    }
+  }
+  &.btn-success {
+    background: $success;
+    color: $bg;
+
+    svg {
+      fill: $bg;
+      stroke: $bg;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: darken($success, 5);
+      border-color: darken($success, 5);
+      color: $bg;
+
+      svg {
+        fill: $bg;
+        stroke: $bg;
+      }
+    }
+  }
+  &.btn-inverted-success {
+    background: transparent;
+    border: 1px solid $muted;
+    color: $success-text;
+
+    svg {
+      fill: $success-text;
+      stroke: $success-text;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: transparent;
+      border-color: darken($success-text, 5);
+      color: darken($success-text, 5);
+
+      svg {
+        fill: darken($success-text, 5);
+        stroke: darken($success-text, 5);
+      }
+    }
+  }
+  &.btn-warning {
+    background: $warning;
+    color: $bg;
+
+    svg {
+      fill: $bg;
+      stroke: $bg;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: darken($warning, 5);
+      border-color: darken($warning, 5);
+      color: $bg;
+
+      svg {
+        fill: $bg;
+        stroke: $bg;
+      }
+    }
+  }
+  &.btn-inverted-warning {
+    background: transparent;
+    border: 1px solid $muted;
+    color: $warning-text;
+
+    svg {
+      fill: $warning-text;
+      stroke: $warning-text;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background-color: transparent;
+      border-color: darken($warning-text, 5);
+      color: darken($warning-text, 5);
+
+      svg {
+        fill: darken($warning-text, 5);
+        stroke: darken($warning-text, 5);
+      }
+    }
+  }
+}
+.btn-icon.btn-dark {
+  @extend .btn-icon-simple.btn-dark;
+
+  height: 44px;
+  width: 44px;
+
+  &:hover:not(:disabled),
+  &:active:not(:disabled),
+  &:focus {
+    background-color: lighten($grey-6, 5);
+  }
+
+  &.btn-primary {
+    background: $grey-0;
+    color: $color;
+
+    svg {
+      fill: $color;
+      stroke: $color;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background: $bg;
+      color: $color;
+
+      svg {
+        fill: $color;
+        stroke: $color;
+      }
+    }
+  }
+  &.btn-inverted-primary {
+    background: transparent;
+    border: 1px solid $grey-4;
+    color: $grey-0;
+
+    svg {
+      fill: $grey-0;
+      stroke: $grey-0;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background: lighten($grey-6, 5);
+      border-color: $bg;
+      color: $bg;
+
+      svg {
+        fill: $bg;
+        stroke: $bg;
+      }
+    }
+  }
+  &.btn-info {
+    background: $blue-1;
+    color: $bg;
+
+    svg {
+      fill: $bg;
+      stroke: $bg;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background: lighten($blue-1, 5);
+      color: $bg;
+
+      svg {
+        fill: $bg;
+        stroke: $bg;
+      }
+    }
+  }
+  &.btn-inverted-info {
+    background: transparent;
+    border: 1px solid $grey-4;
+    color: $blue-0;
+
+    svg {
+      fill: $blue-0;
+      stroke: $blue-0;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background: transparent;
+      border-color: lighten($blue-0, 5);
+      color: $blue-0;
+
+      svg {
+        fill: $blue-0;
+        stroke: $blue-0;
+      }
+    }
+  }
+  &.btn-danger {
+    background: $red-1;
+    color: $bg;
+
+    svg {
+      fill: $bg;
+      stroke: $bg;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background: lighten($red-1, 5);
+      color: $bg;
+
+      svg {
+        fill: $bg;
+        stroke: $bg;
+      }
+    }
+  }
+  &.btn-inverted-danger {
+    background: transparent;
+    border: 1px solid $grey-4;
+    color: $red-0;
+
+    svg {
+      fill: $red-0;
+      stroke: $red-0;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background: transparent;
+      border-color: lighten($red-0, 5);
+      color: $red-0;
+
+      svg {
+        fill: $red-0;
+        stroke: $red-0;
+      }
+    }
+  }
+  &.btn-success {
+    background: $green-1;
+    color: $bg;
+
+    svg {
+      fill: $bg;
+      stroke: $bg;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background: lighten($green-1, 5);
+      color: $bg;
+
+      svg {
+        fill: $bg;
+        stroke: $bg;
+      }
+    }
+  }
+  &.btn-inverted-success {
+    background: transparent;
+    border: 1px solid $grey-4;
+    color: $green-0;
+
+    svg {
+      fill: $green-0;
+      stroke: $green-0;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background: transparent;
+      border-color: lighten($green-0, 5);
+      color: $green-0;
+
+      svg {
+        fill: $green-0;
+        stroke: $green-0;
+      }
+    }
+  }
+  &.btn-warning {
+    background: $yellow-1;
+    color: $bg;
+
+    svg {
+      fill: $bg;
+      stroke: $bg;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background: lighten($yellow-1, 5);
+      color: $bg;
+
+      svg {
+        fill: $bg;
+        stroke: $bg;
+      }
+    }
+  }
+  &.btn-inverted-warning {
+    background: transparent;
+    border: 1px solid $grey-4;
+    color: $yellow-0;
+
+    svg {
+      fill: $yellow-0;
+      stroke: $yellow-0;
+    }
+
+    &:hover:not(:disabled),
+    &:active:not(:disabled),
+    &:focus {
+      background: transparent;
+      border-color: lighten($yellow-0, 5);
+      color: $yellow-0;
+
+      svg {
+        fill: $yellow-0;
+        stroke: $yellow-0;
+      }
+    }
+  }
+}
+
+.btn-icon.btn-sm {
+  height: 32px;
+  width: 32px;
+}
+.btn-icon.btn-md {
+  height: 44px;
+  width: 44px;
+}
+.btn-icon.btn-lg {
+  height: 60px;
+  width: 60px;
+}
